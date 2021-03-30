@@ -6,7 +6,7 @@ EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
-COPY ["BuildPipeEditDockerProject.csproj", ""]
+COPY ["BuildPipeEditDockerProject.csproj", "/"]
 RUN dotnet restore "BuildPipeEditDockerProject.csproj"
 COPY . .
 WORKDIR "/src/BuildPipeEditDockerProject"
